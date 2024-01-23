@@ -1,0 +1,14 @@
+# Virtual environment
+venv
+
+# Noise files
+__pycahe__*
+*.pyc
+tmp.txt
+
+# Security
+# No pdf files
+*.pdf
+# No scripting files
+*.sh
+*.bat
