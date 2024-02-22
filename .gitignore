@@ -12,3 +12,7 @@ tmp.txt
 # No scripting files
 *.sh
 *.bat
+
+# Creating Executable. Compilation/Build files
+build*
+main.spec
