@@ -74,9 +74,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://www.thewindowsclub.com/wp-content/uploads/2019/03/Password-protect-PDF-documents-with-LibreOffice.png)
 
-The aim of this project is to simplify encrypting PDF documents. No 3rd party software required. Just run the program, enter the appropriate inputs and VOILA, your documents are encrypted.
+The aim of this project is to simplify encrypting PDF documents. No 3rd party software required. Just run the program, enter the appropriate inputs and VOILA, your documents are encrypted. So far, it's done in the command line.
 <!-- <br>
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `linked_in`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description` -->
 
@@ -103,32 +103,48 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Thus far, this program must be installed using python (a standalone version would be created soon). First, ensure you have Python version 3 on your computer. 
+<br>Then, download the files from the repository.
+<!-- This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps. -->
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+For now, this program requires Python version 3.10 or older to run. Visit the [Python](https://www.python.org/downloads/) website for more details.
+<!-- * npm
   ```sh
   npm install npm@latest -g
-  ```
+  ``` -->
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+<!-- 1. Get a free API Key at [https://example.com](https://example.com) -->
+1. Clone the repository
    ```sh
    git clone https://github.com/Racerin/pdf_encrypt_dir.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
+2. Set up your virtual environment
+   #### Windows (Powershell/cmd):
+   ```ps
+   python -m venv venv
+   ... (Success message)
+   venv/Scripts/activate
    ```
-4. Enter your API in `config.js`
+   #### Linux (Bash):
+   ```sh
+   python -m venv venv
+   ... (Success message)
+   source venv/Scripts/activate
+   ```
+3. Install 3rd party packages
+   ```
+   pip install -r requirements.txt
+   ```
+<!-- 3. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
-   ```
+   ``` -->
+   And you are finished. Now you could run the program.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,9 +153,29 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://example.com)_ -->
+
+This program works via the command line interface (CLI). 
+Use the following command it initiate the program.
+```
+python -m main
+```
+<br>Use the 'help' command to see the funtionalities available and the arguments.
+```
+python -m main --help
+```
+Here is a snippet of what you could do with the program.
+```
+Options:
+  --user_password TEXT   Password for encrypting PDF documents.
+  --owner_password TEXT  Password for encrypting PDF documents. Grants full
+                         access.
+  --read_dir TEXT        Directory of PDF files to encrypt.
+  --write_dir TEXT       Directory of files to place encrypted PDF files..
+  --help                 Show this message and exit.
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,10 +184,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
+<!-- - [ ] Feature 2 -->
+<!-- - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
-    - [ ] Nested Feature
+    - [ ] Nested Feature -->
 
 See the [open issues](https://github.com/Racerin/pdf_encrypt_dir/issues) for a full list of proposed features (and known issues).
 
@@ -190,8 +227,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Darnell Baird - [@linked_in](https://tt.linkedin.com/in/darnell-baird-3d) - drsbaird@yahoo.com
-
-Project Link: [https://github.com/Racerin/pdf_encrypt_dir](https://github.com/Racerin/pdf_encrypt_dir)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
